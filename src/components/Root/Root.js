@@ -1,6 +1,7 @@
 import React from 'react';
 import './Root.css';
 import { connect } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { ROOT_PAGES } from './../../constants/types'
 import Menu from './../Menu/Menu';
@@ -23,10 +24,20 @@ class Root extends React.Component {
 
     render = () => {
         return (
+            <BrowserRouter>
             <div className={'snow-root'}>
-                <Menu />
-                {this.setActivePage(this.props.page)}
+                <Switch>
+                    <Route exact path="/">
+                        <Menu />
+                        {this.setActivePage(this.props.page)}
+                    </Route>
+                    <Route exact path="/add">
+                        <Menu />
+                    </Route>
+                </Switch>
+
             </div>
+            </BrowserRouter>
         );
     }
 }
