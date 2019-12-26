@@ -7,6 +7,7 @@ import { ROOT_PAGES } from './../../constants/types'
 import Menu from './../Menu/Menu';
 import BooksList from './../BooksList/BooksList';
 import AuthorsList from './../AuthorsList/AuthorsList';
+import AddBook from "../AddBook/AddBook";
 
 class Root extends React.Component {
     setActivePage = (page) => {
@@ -32,7 +33,7 @@ class Root extends React.Component {
                         {this.setActivePage(this.props.page)}
                     </Route>
                     <Route exact path="/add">
-                        <Menu />
+                        <AddBook />
                     </Route>
                 </Switch>
 

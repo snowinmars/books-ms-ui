@@ -13,15 +13,10 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import {Link} from "react-router-dom";
 
 const axios = require('axios').default;
-const https = require('https');
 
 class BookList extends React.Component {
     componentDidMount() {
-        const agent = new https.Agent({
-            rejectUnauthorized: false
-        });
-
-        axios.get('http://localhost:5000/api/books/list', { httpsAgent: agent })
+        axios.get('http://localhost:5000/api/books/list')
         .then((x) => this.setState({books: x.data}))
         .catch((x) => console.log('(', x));
     }
@@ -74,7 +69,10 @@ const BookList_Table = (props) => {
                             {book.authors}
                         </TableCell>
                         <TableCell>
-                            {book.status}
+                            {book.year}
+                        </TableCell>
+                        <TableCell>
+                            {book.isbn}
                         </TableCell>
                     </TableRow>
                 ))}

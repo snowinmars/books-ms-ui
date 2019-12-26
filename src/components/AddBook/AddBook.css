@@ -1,0 +1,8 @@
+.snow-book-add-form {
+    display: flex;
+    flex-direction: column;
+}
+
+button.snow-book-add-form-submit {
+    margin-top: 3em;
+}
