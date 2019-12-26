@@ -8,40 +8,25 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+const axios = require('axios').default;
+const https = require('https');
 
 class BookList extends React.Component {
+    componentDidMount() {
+        const agent = new https.Agent({
+            rejectUnauthorized: false
+        });
+
+        axios.get('http://localhost:5000/api/books/list', { httpsAgent: agent })
+        .then((x) => this.setState({books: x.data}))
+        .catch((x) => console.log('(', x));
+    }
+
     constructor(props) {
         super(props);
 
         this.state = {
-            books: [
-                {
-                    id: '1',
-                    title: 'book title 1',
-                    authors: [
-                        {
-                            id: 1,
-                            well_known_name: 'author 1'
-                        }
-                    ],
-                    status: 'local'
-                },
-                {
-                    id: '2',
-                    title: 'book title 2',
-                    authors: [
-                        {
-                            id: 2,
-                            well_known_name: 'author 2'
-                        },
-                        {
-                            id: 3,
-                            well_known_name: 'author 3'
-                        }
-                    ],
-                    status: 'at sister'
-                }
-            ]
+            books: []
         }
     }
 
@@ -78,9 +63,7 @@ const BookList_Table = (props) => {
                             {book.title}
                         </TableCell>
                         <TableCell>
-                            {book.authors.map(author => {
-                                return author.well_known_name
-                            }).join(', ')}
+                            {book.authors}
                         </TableCell>
                         <TableCell>
                             {book.status}

@@ -44,6 +44,7 @@
       <e p="node_modules/@typescript-eslint/experimental-utils" t="IncludeRecursive" />
       <e p="node_modules/@typescript-eslint/parser" t="IncludeRecursive" />
       <e p="node_modules/@typescript-eslint/typescript-estree" t="IncludeRecursive" />
+      <e p="node_modules/axios" t="IncludeRecursive" />
       <e p="node_modules/babel-jest" t="IncludeRecursive" />
       <e p="node_modules/chalk" t="IncludeRecursive" />
       <e p="node_modules/chokidar" t="IncludeRecursive" />
@@ -54,6 +55,7 @@
       <e p="node_modules/dotenv-expand" t="IncludeRecursive" />
       <e p="node_modules/fast-deep-equal" t="IncludeRecursive" />
       <e p="node_modules/fast-glob" t="IncludeRecursive" />
+      <e p="node_modules/https" t="IncludeRecursive" />
       <e p="node_modules/is-in-browser" t="IncludeRecursive" />
       <e p="node_modules/jest" t="IncludeRecursive" />
       <e p="node_modules/jest-haste-map" t="IncludeRecursive" />
@@ -80,9 +82,13 @@
       <e p="node_modules/react-redux" t="IncludeRecursive" />
       <e p="node_modules/react-scripts" t="IncludeRecursive" />
       <e p="node_modules/realpath-native" t="IncludeRecursive" />
+      <e p="node_modules/redux" t="IncludeRecursive" />
       <e p="node_modules/rifm" t="IncludeRecursive" />
+      <e p="node_modules/rxjs" t="IncludeRecursive" />
       <e p="node_modules/source-map" t="IncludeRecursive" />
+      <e p="node_modules/symbol-observable" t="IncludeRecursive" />
       <e p="node_modules/tiny-warning" t="IncludeRecursive" />
+      <e p="node_modules/tslib" t="IncludeRecursive" />
       <e p="node_modules/upath" t="IncludeRecursive" />
       <e p="node_modules/worker-farm" t="IncludeRecursive" />
     </e>
